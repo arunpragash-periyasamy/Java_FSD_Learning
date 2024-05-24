@@ -1,3 +1,4 @@
+package Day_1.Datatypes;
 import java.util.Arrays;
 
 public class Main {
@@ -51,6 +52,15 @@ public class Main {
          * char is datatype which store a single character.
          * char is wrapped inside a single quote.
          */
+
+         boolean status = true;
+         System.out.println("boolean : " + status);
+
+         /*
+          * boolean is a data type which contains only two values either true or false.
+          */
+
+
          //  Non-Primitives
          
          String name = "Arunpragash";
@@ -83,7 +93,7 @@ public class Main {
          * To print the values of an array we have toString method in the Arrays class. 
          * To use that first we need to import the class 'import java.util.Arrays' which is inside the util package
          */
-        
+
     }
 
 }
