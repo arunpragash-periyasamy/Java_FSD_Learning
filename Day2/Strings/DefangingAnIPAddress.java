@@ -8,6 +8,6 @@ public class DefangingAnIPAddress {
         String ipAddress = scanner.nextLine();
         scanner.close();
         Solution solution = new Solution();
-        System.out.println(solution.defangIPaddr(ipAddress));
+        System.out.println(solution.defangIPaddr2(ipAddress));
     }
 }
