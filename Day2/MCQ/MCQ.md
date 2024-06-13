@@ -105,4 +105,3 @@ c) Sequential & Random
 d) Binary search
 
 # answer b. Sequential
-
