@@ -1,4 +1,4 @@
-package demo.src.main.java.com.jdbc;
+package com.jdbc;
 
 import java.sql.Connection;
 import java.sql.Statement;
