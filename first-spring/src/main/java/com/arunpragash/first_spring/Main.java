@@ -11,11 +11,12 @@ public class Main {
 		ApplicationContext context = SpringApplication.run(Main.class, args);
 		Alien alien = context.getBean(Alien.class);
 		alien.code();
-		Alien alien2 = context.getBean(Alien.class);
-		alien2.code();
 
-		Laptop laptop = context.getBean(Laptop.class);
-		laptop.compile();
+		Alien alien2 = context.getBean(Alien.class);
+		System.out.println(alien == alien2); // both the objects alien and alien2 are same object
+
+		// Laptop laptop = context.getBean(Laptop.class);
+		// laptop.compile();
 	}
 
 }
