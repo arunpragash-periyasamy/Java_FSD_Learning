@@ -5,8 +5,17 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-<bean id="alien" class="com.arunpragash.Alien">
+<!-- Setter injection for the class Alien It will be helpful to set the value to the properties of the class. And it is done by calling the setters of the proprty eg setName(), setRole() -->
+<!-- <bean id="alien" class="com.arunpragash.Alien">
 <property name="name" value="Arunpragash"/>
 <property name="role" value="Developer"/>
 </bean>
-</beans>
+</beans> -->
+
+
+<!-- Constructor injection for the alien class -->
+
+<bean id="alien" class="com.arunpragash.Alien">
+    <constructor-arg name="name" value=""/>
+    <constructor-arg name="role" value=""/>
+</bean>
