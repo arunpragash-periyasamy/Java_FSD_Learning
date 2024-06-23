@@ -14,7 +14,7 @@ public class Alien {
         this.com = com;
     }
 
-    Alien() {
+    public Alien() {
         this.name = "Default Name";
         this.role = "Role";
         this.expeience = 0;

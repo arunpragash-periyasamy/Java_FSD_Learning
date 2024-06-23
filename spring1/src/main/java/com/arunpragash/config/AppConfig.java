@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+import com.arunpragash.Alien;
 import com.arunpragash.Desktop;
 
 @Configuration
@@ -16,6 +17,11 @@ public class AppConfig {
     public Desktop desktop()
     {
         return new Desktop();
+    }
+
+    @Bean
+    public Alien alien() {
+        return new Alien(); 
     }
 
     
