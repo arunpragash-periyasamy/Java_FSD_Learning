@@ -20,6 +20,7 @@ public class App
 
         Alien alien = context.getBean(Alien.class);
         alien.code();
+        System.out.println(alien.getName());
         ((AnnotationConfigApplicationContext) context).close();
     }
 

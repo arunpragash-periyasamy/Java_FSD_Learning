@@ -2,10 +2,13 @@ package com.arunpragash;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Alien {
+
+    @Value("Arunpragash")
     private String name;
     private String role;
     private int expeience;
@@ -23,7 +26,7 @@ public class Alien {
     private Computer com;
 
 
-    @Autowired // Setter Autowiring
+    // @Autowired // Setter Autowiring
     public Computer getCom() {
         return com;
     }
