@@ -2,10 +2,13 @@ package com.arunpragash.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Scope;
 
 import com.arunpragash.Alien;
+import com.arunpragash.Computer;
 import com.arunpragash.Desktop;
+import com.arunpragash.Laptop;
 
 @Configuration
 
@@ -18,14 +21,19 @@ public class AppConfig {
     {
         return new Desktop();
     }
-
+    
     @Bean
-    public Alien alien() {
+    public Alien alien(Computer com) {
         Alien alien = new Alien();
-        alien.setCom(desktop());
+        alien.setCom(com);
         alien.setName("Arunpragash");
         return alien; 
     }
-
+    
+    @Bean
+    @Primary
+    public Laptop laptop() {
+        return new Laptop();
+    }
     
 }
