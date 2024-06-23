@@ -1,15 +1,27 @@
 package com.arunpragash;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-/**
- * Hello world!
- *
- */
+import com.arunpragash.config.AppConfig;
+
 public class App 
 {
-    public static void main( String[] args )
+
+    // Main Method for Java Based Configuration
+
+    public static void main(String[] args) {
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        Desktop desktop = context.getBean(Desktop.class);
+        desktop.compile();
+        ((AnnotationConfigApplicationContext) context).close();
+    }
+
+
+    // Main  Method for the XML Configuration
+
+    // public static void main( String[] args )
     {
         // @SuppressWarnings("resource")
         ApplicationContext context = new ClassPathXmlApplicationContext("InnerBean.xml");
