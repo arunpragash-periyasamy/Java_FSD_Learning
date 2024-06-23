@@ -4,14 +4,14 @@ public class Alien {
     private String name;
     private String role;
     private int expeience;
-    private Laptop lap;
+    private Computer com;
 
-    public Laptop getLap() {
-        return lap;
+    public Computer getCom() {
+        return com;
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    public void setCom(Computer com) {
+        this.com = com;
     }
 
     Alien() {
@@ -47,6 +47,7 @@ public class Alien {
 
     public void code() {
         System.out.println("Coding....");
+        com.compile();
     }
 
     public String getName() {

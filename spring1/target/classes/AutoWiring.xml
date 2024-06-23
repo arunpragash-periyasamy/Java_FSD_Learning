@@ -5,14 +5,42 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-<bean id="alien" class="com.arunpragash.Alien">
+        <!-- Refering with the name -->
+<!-- <bean id="alien" class="com.arunpragash.Alien">
 <property name="name" value="Arunpragash"/>
 <property name="role" value="Developer"/>
-<property name="lap" ref="laptop"></property>
+<property name="com" ref="laptop"></property>
+</bean> -->
+
+<!-- Auto wiring by the name -->
+<!-- <bean id="alien" class="com.arunpragash.Alien" autowire="byName">
+<property name="name" value="Arunpragash"/>
+<property name="role" value="Developer"/>
+<property name="com" ref="com"></property>
 </bean>
 
 <bean id="laptop" class="com.arunpragash.Laptop">
 </bean>
 
-<bean id="desktop" class="com.arunpragash.Desktop"></bean>
+<bean id="com" class="com.arunpragash.Desktop"></bean> -->
+
+
+
+<!-- Auto wiring by the type here there are two object with the same type so we are using the primary keyword to use the object -->
+<bean id="alien" class="com.arunpragash.Alien" autowire="byType">
+<property name="name" value="Arunpragash"/>
+<property name="role" value="Developer"/>
+<property name="com" ref="com"></property>
+</bean>
+
+<bean id="laptop" class="com.arunpragash.Laptop" primary="true">
+</bean>
+
+<!-- Lazy initialization which will create the object when it really needed -->
+<bean id="com" class="com.arunpragash.Desktop" lazy-init="true"/>
+
+
+
+
+
 </beans>

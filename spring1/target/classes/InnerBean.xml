@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+<!-- Inner Bean will be creating an separate object for the bean which needs -->
+<bean id="alien" class="com.arunpragash.Alien">
+    <property name="com" >
+        <bean id="lap" class="com.arunpragash.Laptop"/>
+    </property>
+
+</bean>
+
+<bean id="laptop" class="com.arunpragash.Laptop" primary="true">
+</bean>
+
+<!-- Lazy initialization which will create the object when it really needed -->
+<bean id="com" class="com.arunpragash.Desktop" lazy-init="true"/>
+</beans>
