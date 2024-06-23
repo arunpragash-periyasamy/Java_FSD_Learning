@@ -21,7 +21,10 @@ public class AppConfig {
 
     @Bean
     public Alien alien() {
-        return new Alien(); 
+        Alien alien = new Alien();
+        alien.setCom(desktop());
+        alien.setName("Arunpragash");
+        return alien; 
     }
 
     

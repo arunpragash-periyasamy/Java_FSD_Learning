@@ -17,6 +17,9 @@ public class App
         Desktop desktop = context.getBean("desktop",Desktop.class);
         Desktop com2 = context.getBean("com2",Desktop.class);
         System.out.println(desktop == com2); // Both the objects are same as default, because spring uses singleton
+
+        Alien alien = context.getBean(Alien.class);
+        alien.code();
         ((AnnotationConfigApplicationContext) context).close();
     }
 
