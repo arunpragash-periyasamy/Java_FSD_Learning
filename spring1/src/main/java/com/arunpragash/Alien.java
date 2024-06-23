@@ -1,5 +1,8 @@
 package com.arunpragash;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Alien {
     private String name;
     private String role;
