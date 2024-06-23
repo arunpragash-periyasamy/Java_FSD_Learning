@@ -1,5 +1,6 @@
 package com.arunpragash.config;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -22,8 +23,16 @@ public class AppConfig {
         return new Desktop();
     }
     
+    // @Bean
+    // public Alien alien(Computer com) {
+    //     Alien alien = new Alien();
+    //     alien.setCom(com);
+    //     alien.setName("Arunpragash");
+    //     return alien; 
+    // }
+    
     @Bean
-    public Alien alien(Computer com) {
+    public Alien alien(@Qualifier("desktop") Computer com) {  //using @Qualifier annotation we can mention the name of the bean to access.
         Alien alien = new Alien();
         alien.setCom(com);
         alien.setName("Arunpragash");
