@@ -6,16 +6,20 @@
 
 
 <!-- Setter injection for the class Alien It will be helpful to set the value to the properties of the class. And it is done by calling the setters of the proprty eg setName(), setRole() -->
-<!-- <bean id="alien" class="com.arunpragash.Alien">
+<bean id="alien" class="com.arunpragash.Alien">
 <property name="name" value="Arunpragash"/>
 <property name="role" value="Developer"/>
 </bean>
-</beans> -->
+
 
 
 <!-- Constructor injection for the alien class -->
 
-<bean id="alien" class="com.arunpragash.Alien">
-    <constructor-arg name="name" value=""/>
-    <constructor-arg name="role" value=""/>
+<bean id="alienConstructor" class="com.arunpragash.Alien">
+    <constructor-arg name="name" value="Arunpragash"/>
+    <constructor-arg name="role" value="Developer"/>
+    <constructor-arg name="experience" value="1"/>
 </bean>
+</beans>
+
+<!-- Refering the Laptop to the alien class -->

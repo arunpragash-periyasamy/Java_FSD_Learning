@@ -4,6 +4,21 @@ public class Alien {
     private String name;
     private String role;
     private int expeience;
+    private Laptop lap;
+
+    public Laptop getLap() {
+        return lap;
+    }
+
+    public void setLap(Laptop lap) {
+        this.lap = lap;
+    }
+
+    Alien() {
+        this.name = "Default Name";
+        this.role = "Role";
+        this.expeience = 0;
+    }
 
     public int getExpeience() {
         return expeience;
