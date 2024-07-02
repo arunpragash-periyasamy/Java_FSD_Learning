@@ -29,4 +29,8 @@ public class JobRepo {
         return jobs;
     }
 
+    public JobPost getPost(int postId) {
+        return jobs.stream().filter(post -> post.getPostId() == postId).findFirst().get();
+}
+
 }
