@@ -1,12 +1,12 @@
-package com.arpragash.jobportal.service;
+package com.arunpragash.jobportal.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.arpragash.jobportal.JobRepo;
-import com.arpragash.jobportal.model.JobPost;
+import com.arunpragash.jobportal.model.JobPost;
+import com.arunpragash.jobportal.repo.JobRepo;
 
 @Service
 public class JobService {

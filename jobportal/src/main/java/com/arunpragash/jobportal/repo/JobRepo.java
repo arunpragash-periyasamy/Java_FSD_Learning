@@ -1,4 +1,4 @@
-package com.arpragash.jobportal;
+package com.arunpragash.jobportal.repo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.arpragash.jobportal.model.JobPost;
+import com.arunpragash.jobportal.model.JobPost;
 
 @Repository
 public class JobRepo {

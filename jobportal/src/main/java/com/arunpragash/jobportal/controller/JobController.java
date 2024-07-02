@@ -1,11 +1,15 @@
-package com.arpragash.jobportal.controller;
+package com.arunpragash.jobportal.controller;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.arpragash.jobportal.model.JobPost;
-import com.arpragash.jobportal.service.JobService;
+import com.arunpragash.jobportal.model.JobPost;
+import com.arunpragash.jobportal.service.JobService;
 
 @Controller
 public class JobController {
@@ -23,8 +27,10 @@ public class JobController {
         return "addjob";
     }
 
-    @RequestMapping("/viewalljobs")
-    public String allJobs() {
+    @GetMapping("/viewalljobs")
+    public String allJobs(Model model) {
+        List<JobPost> jobs = service.getAllJobs();
+        model.addAttribute("jobPosts", jobs);
         return "viewalljobs";
     }
 

@@ -1,4 +1,4 @@
-package com.arpragash.jobportal.model;
+package com.arunpragash.jobportal.model;
 
 import java.util.List;
 
