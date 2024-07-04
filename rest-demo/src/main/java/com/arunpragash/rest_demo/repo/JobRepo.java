@@ -33,4 +33,17 @@ public class JobRepo {
         return jobs.stream().filter(post -> post.getPostId() == postId).findFirst().get();
 }
 
+public void deleteJob(int postId) {
+        jobs.removeIf(post -> post.getPostId() == postId);
+}
+
+public boolean updateJob(JobPost job) {
+        if (jobs.removeIf(post -> post.getPostId() == job.getPostId())) {
+                jobs.add(job);
+                return true;
+        }
+        return false;
+}
+
+
 }
