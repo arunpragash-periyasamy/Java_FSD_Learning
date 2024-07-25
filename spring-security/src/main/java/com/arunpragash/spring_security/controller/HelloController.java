@@ -1,4 +1,4 @@
-package com.arunpragash.spring_security;
+package com.arunpragash.spring_security.controller;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
